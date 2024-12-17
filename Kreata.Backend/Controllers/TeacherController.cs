@@ -16,9 +16,11 @@ namespace Kreata.Backend.Controllers
         {
             _teacherRepo = teacherRepo ?? throw new ArgumentNullException(nameof(teacherRepo));
         }
-        public TeacherController()
+        [HttpGet]
+        public async Task<IActionResult> GetAllTeacherAsnyc()
         {
-            
+            var teachers = _teacherRepo.GetAllAsync();
+            return Ok(teachers);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Kreta.Shared.Models
 {
-    public class Teacher
+    public class Teacher : IDbEntity<Teacher>
     {
         public Teacher()
         {
